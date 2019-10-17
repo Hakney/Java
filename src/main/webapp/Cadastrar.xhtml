@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>CRUD</title>
+    </h:head>
+    <h:body>
+        <h1>CRUD Funcionários</h1>
+        <h:form>    
+            <h:panelGrid columns="2"> 
+                <h:outputLabel value="Nome"/>
+                <h:inputText required="true" requiredMessage="Insira o nome" value="#{usuarioMB.usuario.nome}"/>
+                
+                <h:outputLabel value="Idade"/>
+                <h:inputText required="true" requiredMessage="Insira sua idade" value="#{usuarioMB.usuario.idade}"/>
+                
+                <h:outputLabel value="Cargo"/>
+                <h:inputText required="true" requiredMessage="Insira o cargo" value="#{usuarioMB.usuario.cargo}"/>
+            </h:panelGrid>
+
+            <h:commandButton value="Cadastrar" action="#{usuarioMB.cadastrar()}" />
+        </h:form> 
+    </h:body>
+</html>

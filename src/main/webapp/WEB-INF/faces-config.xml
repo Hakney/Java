@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+    <managed-bean>
+        <managed-bean-name>usuarioMB</managed-bean-name>
+        <managed-bean-class>Controller.UsuarioMB</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <navigation-rule>
+        <from-view-id>/index.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>link</from-outcome>
+            <to-view-id>/Cadastrar.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/Cadastrar.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Cadastrar</from-outcome>
+            <to-view-id>/pag-sucess.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+</faces-config>

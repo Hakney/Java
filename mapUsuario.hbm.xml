@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping
+    package="Usuario">
+    <class name="Funcionarios">
+        <id name="id" column="id" type="integer"/>
+        <property name="nome" />
+        <property name="idade" />
+        <property name="cargo" />
+    </class>
+      <mapping class="com.mycompany.crud.Usuario" />
+</hibernate-mapping>

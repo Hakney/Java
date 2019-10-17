@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Project" version="2">
+    <Scope Scope="Faces Configuration Only"/>
+    <Scope Scope="Project">
+        <Node id="pag-sucess.xhtml" x="7" y="322" zoom="false"/>
+        <Node id="Cadastrar.xhtml" x="12" y="211" zoom="true"/>
+        <Node id="index.xhtml" x="25" y="101" zoom="true"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations"/>
+</Scene>
