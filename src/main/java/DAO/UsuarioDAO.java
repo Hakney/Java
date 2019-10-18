@@ -6,9 +6,11 @@
 package DAO;
 
 import Models.Usuario;
+import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
 
 /**
  *
@@ -83,24 +85,16 @@ public class UsuarioDAO {
     }
   }
 
-  /**
-   * Consulta o pessoa pelo ID.
-   * @param id
-   * @return o objeto Pessoa.
-   */
-  public Usuario consultarPorId(Long id) {
+  public List<Usuario> listar(){
     EntityManager entityManager = getEntityManager();
-    Usuario usuario = null;
-    try {
-      //Consulta uma pessoa pelo seu ID.
-      usuario = entityManager.find(Usuario.class, id);
-    } finally {
-      entityManager.close();
-    }
+
+    String queryString = "select x from Usuario x";
+
+    Query query = entityManager.createQuery(queryString);
+
+    List<Usuario> usuario = query.getResultList();
+    
     return usuario;
   }
 
-    private Object getId() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }

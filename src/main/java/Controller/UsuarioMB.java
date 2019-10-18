@@ -2,13 +2,15 @@ package Controller;
 
 import DAO.UsuarioDAO;
 import Models.Usuario;
+import java.util.List;
 import javax.faces.context.FacesContext;
 
 public class UsuarioMB {
     
     private Usuario usuario;
     private UsuarioDAO dao = new UsuarioDAO();
-
+    private List<Usuario> listaUsuario;
+    
     public UsuarioMB(){
         usuario = new Usuario();
     }
@@ -16,11 +18,15 @@ public class UsuarioMB {
     public Usuario cadastrar() throws Exception{
         usuario = dao.cadastrar(usuario);
         if(usuario != null){
-            FacesContext.getCurrentInstance().getExternalContext().redirect("pag-sucess.xhtml");  // Redireciona após cadastrar
+            FacesContext.getCurrentInstance().getExternalContext().redirect("usuarioList.xhtml");  // Redireciona após cadastrar
         }   
         return usuario;
     }
     
+    public List<Usuario> listar(){
+       return listaUsuario = dao.listar();
+    }
+            
     public Usuario getUsuario() {
         return usuario;
     }
@@ -28,8 +34,18 @@ public class UsuarioMB {
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
+    
+    /**
+     * @return the listaUsuario
+     */
+    public List<Usuario> getListaUsuario() {
+        return listaUsuario;
+    }
 
-    private void msgbox(String dont_touch_that) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    /**
+     * @param listaUsuario the listaUsuario to set
+     */
+    public void setListaUsuario(List<Usuario> listaUsuario) {
+        this.listaUsuario = listaUsuario;
     }
 }
