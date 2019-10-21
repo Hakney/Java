@@ -26,6 +26,10 @@
                     <f:facet name="header">Cargo</f:facet><font></font>
                     <h:outputText value="#{usuarioListado.cargo}"/>
                 </h:column>
+                <h:column> 
+                    <f:facet name="header"><h:outputText value="Ações" /></f:facet> 
+                    <h:commandButton action="usuarioList" actionListener="#{usuarioMB.excluir(usuarioListado.id)}" value="Excluir" /> 
+                </h:column> 
             </h:dataTable>
         </h:form>
         

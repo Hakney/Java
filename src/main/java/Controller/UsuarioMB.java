@@ -23,6 +23,10 @@ public class UsuarioMB {
         return usuario;
     }
     
+    public void excluir(Integer id){
+        dao.excluir(id);
+    }
+    
     public List<Usuario> listar(){
        return listaUsuario = dao.listar();
     }

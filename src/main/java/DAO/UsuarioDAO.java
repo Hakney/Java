@@ -68,7 +68,7 @@ public class UsuarioDAO {
    */
   
   
-  public void excluir(Long id) {
+  public void excluir(Integer id) {
     EntityManager entityManager = getEntityManager();
     try {
       // Inicia uma transação com o banco de dados.
@@ -85,7 +85,7 @@ public class UsuarioDAO {
     }
   }
 
-  public List<Usuario> listar(){
+   public List<Usuario> listar(){
     EntityManager entityManager = getEntityManager();
 
     String queryString = "select x from Usuario x";
@@ -96,5 +96,5 @@ public class UsuarioDAO {
     
     return usuario;
   }
-
+  
 }
