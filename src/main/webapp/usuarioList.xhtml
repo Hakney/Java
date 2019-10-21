@@ -27,14 +27,13 @@
                     <h:outputText value="#{usuarioListado.cargo}"/>
                 </h:column>
                 <h:column> 
-                    <f:facet name="header"><h:outputText value="Ações" /></f:facet> 
                     <h:commandButton action="usuarioList" actionListener="#{usuarioMB.excluir(usuarioListado.id)}" value="Excluir" /> 
                 </h:column> 
             </h:dataTable>
         </h:form>
         
         <h:form>
-            <h:commandButton action="createUsuario" value="Cadastrar Usuário"/>
+            <h:commandButton action="createUsuario" value="Cadastrar"   />
         </h:form>
     </h:body>
 </html>

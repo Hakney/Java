@@ -47,14 +47,9 @@ public class UsuarioDAO {
       entityManager.getTransaction().begin();
       System.out.println("Salvando usuario.");
       // Verifica se a pessoa ainda não está salva no banco de dados.
-      if(usuario.getId() == null) {
-        //Salva os dados da pessoa.
-        entityManager.persist(usuario);
-      } else {
-        //Atualiza os dados da pessoa.
-        usuario = entityManager.merge(usuario);
-      }
-      // Finaliza a transação.
+     
+      entityManager.persist(usuario);
+     
       entityManager.getTransaction().commit();
     } finally {
       entityManager.close();
@@ -67,7 +62,7 @@ public class UsuarioDAO {
    * @param id
    */
   
-  
+ 
   public void excluir(Integer id) {
     EntityManager entityManager = getEntityManager();
     try {
