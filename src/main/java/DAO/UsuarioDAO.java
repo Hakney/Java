@@ -48,8 +48,11 @@ public class UsuarioDAO {
       System.out.println("Salvando usuario.");
       // Verifica se a pessoa ainda não está salva no banco de dados.
      
-      entityManager.persist(usuario);
-     
+      if(usuario.getId() == null){
+        entityManager.persist(usuario);
+      } else {
+        usuario = entityManager.merge(usuario);
+      }
       entityManager.getTransaction().commit();
     } finally {
       entityManager.close();
