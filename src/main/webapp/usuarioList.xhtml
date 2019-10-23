@@ -30,8 +30,7 @@
                     <h:commandButton action="usuarioList" actionListener="#{usuarioMB.excluir(usuarioListado.id)}" value="Excluir" /> 
                 </h:column> 
                 <h:column> 
-                    <!--<h:commandButton actionListener="#{usuarioMB.buscar(usuarioListado)}"  value="Alterar" />--> 
-                    <h:commandButton action="editUsuario" value="Alterar">
+                    <h:commandButton action="createUsuario" value="Alterar">
                         <f:param name="id" value="#{usuarioListado.id}" />
                     </h:commandButton>
                 </h:column>

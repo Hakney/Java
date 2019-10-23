@@ -6,7 +6,8 @@ and open the template in the editor.
 -->
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>CRUD</title>
     </h:head>
@@ -23,8 +24,10 @@ and open the template in the editor.
                 <h:outputLabel value="Cargo"/>
                 <h:inputText required="true" requiredMessage="Insira o cargo" value="#{usuarioMB.usuario.cargo}"/>
             </h:panelGrid>
-
-            <h:commandButton value="Cadastrar" action="#{usuarioMB.cadastrar()}" />
+                <h:commandButton action="usuarioList" actionListener="#{usuarioMB.cadastrar()}" value="Cadastrar"  />
+                <f:param name="id" value="#{usuarioMB.usuario.id}"/>
+                
+                <h:inputHidden value="#{usuarioMB.usuario.id}"/>
         </h:form> 
     </h:body>
 </html>
