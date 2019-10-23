@@ -9,7 +9,6 @@
     <h:body>
         <h:form id="usuarioForm">
             <h:dataTable value="#{usuarioMB.listar()}" var="usuarioListado">
-                
                 <h:column>
                     <f:facet name="header">Id</f:facet><font></font>
                     <h:outputText value="#{usuarioListado.id}"/>
@@ -34,7 +33,6 @@
                         <f:param name="id" value="#{usuarioListado.id}" />
                     </h:commandButton>
                 </h:column>
-                
             </h:dataTable>
         </h:form>
         
