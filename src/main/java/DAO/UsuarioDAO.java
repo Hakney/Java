@@ -60,12 +60,22 @@ public class UsuarioDAO {
     return usuario;
   }
 
+    public Usuario buscar(Integer id) {
+    EntityManager entityManager = getEntityManager();
+    Usuario usuario = null;
+    try {
+      //Consulta uma pessoa pelo seu ID.
+      usuario = entityManager.find(Usuario.class, id);
+    } finally {
+      entityManager.close();
+    }
+    return usuario;
+    }
+  
   /**
    * Método que apaga a pessoa do banco de dados.
    * @param id
    */
-  
- 
   public void excluir(Integer id) {
     EntityManager entityManager = getEntityManager();
     try {
