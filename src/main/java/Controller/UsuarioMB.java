@@ -13,6 +13,7 @@ public class UsuarioMB {
     private UsuarioDAO dao = new UsuarioDAO();
     private List<Usuario> listaUsuario;
     
+    // TESTANDO BRANCH MASTER
     public UsuarioMB(){
         if (usuario == null) {
             ExternalContext ctx = FacesContext
@@ -64,16 +65,12 @@ public class UsuarioMB {
         this.usuario = usuario;
     }
     
-    /**
-     * @return the listaUsuario
-     */
+
     public List<Usuario> getListaUsuario() {
         return listaUsuario;
     }
 
-    /**
-     * @param listaUsuario the listaUsuario to set
-     */
+
     public void setListaUsuario(List<Usuario> listaUsuario) {
         this.listaUsuario = listaUsuario;
     }
