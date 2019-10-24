@@ -2,7 +2,6 @@
 <Scene Scope="Project" version="2">
     <Scope Scope="Faces Configuration Only"/>
     <Scope Scope="Project">
-        <Node id="pag-sucess.xhtml" x="7" y="322" zoom="false"/>
         <Node id="editUsuario.xhtml" x="295" y="98" zoom="true"/>
         <Node id="createUsuario.xhtml" x="287" y="207" zoom="true"/>
         <Node id="usuarioList.xhtml" x="531" y="152" zoom="true"/>
