@@ -63,17 +63,11 @@ public class UsuarioMB {
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
-    
-    /**
-     * @return the listaUsuario
-     */
+
     public List<Usuario> getListaUsuario() {
         return listaUsuario;
     }
 
-    /**
-     * @param listaUsuario the listaUsuario to set
-     */
     public void setListaUsuario(List<Usuario> listaUsuario) {
         this.listaUsuario = listaUsuario;
     }
