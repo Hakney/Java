@@ -13,6 +13,7 @@ public class UsuarioMB {
     private UsuarioDAO dao = new UsuarioDAO();
     private List<Usuario> listaUsuario;
     
+    // Testando nova branch
     public UsuarioMB(){
         if (usuario == null) {
             ExternalContext ctx = FacesContext
