@@ -14,6 +14,8 @@ public class UsuarioMB {
     private List<Usuario> listaUsuario;
     
     // TESTANDO BRANCH MASTER
+    // Testando nova branch
+
     public UsuarioMB(){
         if (usuario == null) {
             ExternalContext ctx = FacesContext
@@ -64,12 +66,10 @@ public class UsuarioMB {
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
-    
 
     public List<Usuario> getListaUsuario() {
         return listaUsuario;
     }
-
 
     public void setListaUsuario(List<Usuario> listaUsuario) {
         this.listaUsuario = listaUsuario;
